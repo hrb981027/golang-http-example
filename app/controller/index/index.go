@@ -1,11 +1,11 @@
 package index
 
 import (
-	"api-user-login/app/util/response"
 	"github.com/gin-gonic/gin"
+	"golang-http-example/app/util/response"
 )
 
-func Index(c *gin.Context)  {
+func Index(c *gin.Context) {
 	utilGin := response.Gin{Ctx: c}
-	utilGin.Response(200, "Hello World", nil, "json", 200)
+	utilGin.Response(200, "你好 世界", nil, "json", 200)
 }

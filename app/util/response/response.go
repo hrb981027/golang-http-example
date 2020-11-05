@@ -7,17 +7,17 @@ type Gin struct {
 }
 
 type Response struct {
-	Code int `json:"code"`
-	Message string `json:"message"`
-	Data interface{} `json:"data"`
+	Code    int         `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
 }
 
-func (g *Gin)Response(code int, msg string, data interface{}, responseType string, httpStatus int) {
+func (g *Gin) Response(code int, msg string, data interface{}, responseType string, httpStatus int) {
 	if responseType == "json" {
 		g.Ctx.JSON(httpStatus, Response{
-			Code: code,
+			Code:    code,
 			Message: msg,
-			Data: data,
+			Data:    data,
 		})
 
 		return

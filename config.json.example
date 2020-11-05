@@ -1,4 +1,13 @@
 {
-  "app_mode": "",
-  "app_port": ""
+  "system": {
+    "port": "",
+    "dbType": ""
+  },
+  "mysql": {
+    "hostName": "",
+    "hostPort": "",
+    "database": "",
+    "username": "",
+    "password": ""
+  }
 }

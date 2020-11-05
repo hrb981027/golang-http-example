@@ -1,9 +1,9 @@
 package route
 
 import (
-	"api-user-login/app/controller/index"
-	"api-user-login/app/util/response"
 	"github.com/gin-gonic/gin"
+	"golang-http-example/app/controller/index"
+	"golang-http-example/app/util/response"
 )
 
 func SetupRouter(engine *gin.Engine) {
@@ -16,7 +16,6 @@ func SetupRouter(engine *gin.Engine) {
 		utilGin := response.Gin{Ctx: c}
 		utilGin.Response(1, "pong", nil, "json", 200)
 	})
-
 
 	IndexRoute := engine.Group("/")
 	{
